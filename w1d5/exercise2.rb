@@ -1,0 +1,22 @@
+class Queue
+
+  attr_accessor :queue
+
+  def initialize
+    @queue = []
+  end
+
+  def enqueue(el)
+    @queue << el
+    el
+  end
+
+  def dequeue
+    @queue.shift
+  end
+
+  def show
+    @queue
+  end
+
+end
