@@ -1,0 +1,100 @@
+<html>
+    <head>
+    <title>Daniel Chang Recipe</title>
+    </head>
+    <body>
+
+      <header>
+        <img src="https://trademarks.justia.com/media/image.php?serial=86444706" alt="App Academy Logo">
+
+        <nav>
+          <ul>
+            <li><a href="#description">Description</a></li>
+            <li><a href="#ingredients">Ingredients</a></li>
+            <li><a href="#directions">Directions</a></li>
+            <li><a href="#reviews">Review</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <aside>
+        <h2 id="ingredients">Ingredients</h2>
+        <ul>
+          <li>1 to 3 teaspoons flavor base — soup stock paste, miso paste, curry paste</li>
+          <li>1 to 3 teaspoons flavoring extras, optional — chili-garlic sauce, soy sauce or tamari</li>
+          <li>1/4 to 1/2 cup filler ingredients — greens, leftover cooked meat, egg</li>
+          <li>3/4 to 1 cup noodles — ramen, udon, vermicelli</li>
+          <li>1/4 to 1/2 cup fresh ingredients — fresh herbs, sliced green onions, bean sprouts, sliced lime</li>
+        </ul>
+      </aside>
+
+      <section>
+        <h1>Instant Noodle Cups</h1>
+
+        <figure>
+          <img src="http://atmedia.imgix.net/08c6b6bafdfa84871740eec7dc5ff7411c4c42e4?auto=compress&w=800.0&fit=max">
+          <figcaption>
+            <a href="https://en.wikipedia.org/wiki/Cup_Noodles">Wikipedia Link</a>
+          </figcaption>
+        </figure>
+
+        <h2 id="description">Description</h2>
+        <p>
+          Every college kid's go-to meal.
+        </p>
+
+        <h2 id="directions">Directions</h2>
+        <ol>
+          <li>Place flavor base and flavor extras in the bottom of the cup</li>
+          <li>Top with filler ingredients</li>
+          <li>Add the noodles</li>
+          <li>Finish with the fresh ingredients</li>
+          <li>Seal and refrigerate</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 id="reviews">Review</h2>
+
+        <form action="/reviews" method="post">
+          <label for="name">Name</label>
+          <input id="name" type="text" name="name">
+
+          <br>
+
+          <label for="rating">Rating</label>
+          1<input type="radio" name="rating" value="1" checked="true">
+          2<input type="radio" name="rating" value="2">
+          3<input type="radio" name="rating" value="3">
+          4<input type="radio" name="rating" value="4">
+          5<input type="radio" name="rating" value="5">
+
+          <br>
+
+          <label for="expertise">Cooking Expertise</label>
+
+          <select id="expertise" name="expertise">
+            <option value="Select Cooking Expertise" disabled="true" selected="true">Select Cooking Expertise</option>
+            <option value="Sometimes Cook">Sometimes Cook</option>
+            <option value="Cook Everyday">Cook Everyday</option>
+            <option value="Cooking is a Hobby">Cooking is a Hobby</option>
+            <option value="Professional Chef">Profession Chef</option>
+          </select>
+
+          <br>
+
+          <label>Review
+            <textarea name="review"></textarea>
+          </label>
+
+          <input type="submit" value="Submit Review">
+
+        </form>
+
+      </section>
+
+    <footer>
+      <p>Original Recipe by <a href="http://www.thekitchn.com/how-to-make-diy-instant-noodle-cups-222560">Emma Christensen</a></p>
+    </footer>
+    </body>
+</html>
