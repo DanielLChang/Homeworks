@@ -1,0 +1,19 @@
+<form action="<%= corgi_url(@corgi) %>" method="post">
+  <p>Corgi Color</p>
+  <input type="radio"
+    name="corgi[color]"
+    id="corgi_color_sparkly"
+    <% "checked" if @corgi.color == sparkly %>
+    value="sparkly">
+  <label for="corgi_color_sparkly">Sparkly</label>
+  <br>
+
+  <input type="radio"
+    name="corgi[color]"
+    id="corgi_color_iridescent"
+    <% "checked" if @corgi.color == iridescent %>
+    value="iridescent">
+  <label for="corgi_color_iridescent">Iridescent</label>
+
+  <input type="submit" value="Update Corgi">
+</form>
