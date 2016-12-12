@@ -3,8 +3,8 @@ require 'spec_helper'
 describe User do
   subject(:user) do
     FactoryGirl.build(:user,
-      name: "jonathan",
-      password: "good_password")
+      name: "thisismyname",
+      password: "thisisavalidpassword")
   end
 
   it { should validate_presence_of(:name) }
