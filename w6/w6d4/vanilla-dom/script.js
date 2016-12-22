@@ -19,8 +19,22 @@ document.addEventListener("DOMContentLoaded", () => {
   // adding SF places as list items
 
   // --- your code here!
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
+    const favInput = document.querySelector(".favorite-input");
+    const fav = favInput.value;
+    favInput.value = "";
 
+    const newList = document.createElement("li");
+    newList.textContent = fav;
+
+    const favList = document.getElementById("sf-places");
+    favList.appendChild(newList);
+  };
+
+  const listBtn = document.querySelector(".favorite-submit");
+  listBtn.addEventListener("click", handleSubmit);
 
   // adding new photos
 
