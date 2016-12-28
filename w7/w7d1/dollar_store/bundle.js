@@ -62,7 +62,13 @@
 	
 	var _store2 = _interopRequireDefault(_store);
 	
+	var _actions = __webpack_require__(180);
+	
+	var _actions2 = _interopRequireDefault(_actions);
+	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// window.selectCurrency = selectCurrency;
 	
 	document.addEventListener("DOMContentLoaded", function () {
 	  _reactDom2.default.render(_react2.default.createElement(_widget2.default, { store: _store2.default }), document.getElementById('root'));
@@ -21501,7 +21507,7 @@
 	
 	var _currency2 = _interopRequireDefault(_currency);
 	
-	var _actions = __webpack_require__(!(function webpackMissingModule() { var e = new Error("Cannot find module \"../actions\""); e.code = 'MODULE_NOT_FOUND'; throw e; }()));
+	var _actions = __webpack_require__(180);
 	
 	var _actions2 = _interopRequireDefault(_actions);
 	
@@ -21649,7 +21655,27 @@
 	exports.default = Currency;
 
 /***/ },
-/* 180 */,
+/* 180 */
+/***/ function(module, exports) {
+
+	"use strict";
+	
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var SWITCH_CURRENCY = "SWITCH_CURRENCY";
+	
+	var selectCurrency = function selectCurrency(baseCurrency, rates) {
+	  return {
+	    type: SWITCH_CURRENCY,
+	    baseCurrency: baseCurrency,
+	    rates: rates
+	  };
+	};
+	
+	exports.default = selectCurrency;
+
+/***/ },
 /* 181 */
 /***/ function(module, exports, __webpack_require__) {
 
