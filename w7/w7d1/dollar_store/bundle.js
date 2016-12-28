@@ -62,11 +62,10 @@
 	
 	var _store2 = _interopRequireDefault(_store);
 	
-	var _actions = __webpack_require__(180);
-	
-	var _actions2 = _interopRequireDefault(_actions);
-	
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+	
+	// import selectCurrency from './actions';
+	// import reducer from './reducer';
 	
 	// window.selectCurrency = selectCurrency;
 	
@@ -22738,6 +22737,8 @@
 	Object.defineProperty(exports, "__esModule", {
 	  value: true
 	});
+	var SWITCH_CURRENCY = "SWITCH_CURRENCY";
+	
 	var initialState = {
 	  baseCurrency: "Please select",
 	  rates: {}
@@ -22747,7 +22748,15 @@
 	  var state = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : initialState;
 	  var action = arguments[1];
 	
-	  return state; // remove this and fill out the body of the reducer function
+	  switch (action.type) {
+	    case SWITCH_CURRENCY:
+	      return {
+	        baseCurrency: action.baseCurrency,
+	        rates: action.rates
+	      };
+	    default:
+	      return state;
+	  }
 	};
 	
 	exports.default = reducer;
